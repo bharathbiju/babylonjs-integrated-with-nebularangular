@@ -13,6 +13,7 @@ import { ThemeModule } from './@theme/theme.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EngineComponent } from './engine/engine.component';
 import { SubheaderComponent } from './components/subheader/subheader.component';
+import { SubfooterComponent } from './components/subfooter/subfooter.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SubheaderComponent } from './components/subheader/subheader.component';
     SidebarComponent,
     EngineComponent,
     SubheaderComponent,
+    SubfooterComponent,
   ],
   imports: [
     BrowserModule,

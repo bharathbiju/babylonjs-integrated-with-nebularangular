@@ -1,0 +1,29 @@
+<ng-template #dialog let-data let-ref="dialogRef">
+    <nb-card>
+      <nb-card-header>Stall List</nb-card-header>
+      <nb-card-body>   
+        <nb-card class="own-scroll">
+          <nb-card-header>
+            Own scroll
+          </nb-card-header>
+          <nb-list
+            nbInfiniteList
+            [threshold]="500"
+            (bottomThreshold)="loadNext(firstCard)">
+          
+          <nb-list-item nbInfiniteList
+          [threshold]="500"
+          (bottomThreshold)="loadNext(firstCard)" *ngFor="let user of users">
+            <nb-user [name]="user.name" [title]="user.title">
+            </nb-user>
+          </nb-list-item>     
+          </nb-list>
+        </nb-card>
+       
+      </nb-card-body>
+      <nb-card-footer>
+        <button nbButton (click)="ref.close()">Close </button>
+      </nb-card-footer>
+    </nb-card>
+  </ng-template>
+  <button nbButton (click)="open(dialog)">Stall List</button>
