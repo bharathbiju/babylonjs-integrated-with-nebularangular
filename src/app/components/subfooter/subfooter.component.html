@@ -2,23 +2,18 @@
     <nb-card>
       <nb-card-header>Stall List</nb-card-header>
       <nb-card-body>   
-        <nb-card class="own-scroll">
-          <nb-card-header>
-            Own scroll
-          </nb-card-header>
-          <nb-list
-            nbInfiniteList
-            [threshold]="500"
-            (bottomThreshold)="loadNext(firstCard)">
-          
-          <nb-list-item nbInfiniteList
-          [threshold]="500"
-          (bottomThreshold)="loadNext(firstCard)" *ngFor="let user of users">
-            <nb-user [name]="user.name" [title]="user.title">
-            </nb-user>
-          </nb-list-item>     
-          </nb-list>
-        </nb-card>
+   
+          <div class="col-md-12 col-lg-6 col-xxxl-6">
+            <nb-card class="list-card" size="small">
+             
+                <nb-list-item *ngFor="let user of users">
+                  <nb-user [name]="user.name" [title]="user.title">
+                  </nb-user>
+                </nb-list-item>
+              
+            </nb-card>
+          </div>
+      
        
       </nb-card-body>
       <nb-card-footer>
