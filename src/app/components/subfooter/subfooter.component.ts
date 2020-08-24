@@ -1,5 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { NbDialogService } from '@nebular/theme';
+import { NbDialogService, NbMenuItem } from '@nebular/theme';
 
 @Component({
   selector: 'app-subfooter',
@@ -18,20 +18,57 @@ export class SubfooterComponent implements OnInit {
     this.dialogService.open(dialog, { context: 'this is some additional data passed to dialog' });
   }
   
-  users: { name: string, title: string }[] = [
-    { name: 'Carla Espinosa', title: 'Nurse' },
-    { name: 'Bob Kelso', title: 'Doctor of Medicine' },
-    { name: 'Janitor', title: 'Janitor' },
-    { name: 'Perry Cox', title: 'Doctor of Medicine' },
-    { name: 'Ben Sullivan', title: 'Carpenter and photographer' },
-    { name: 'Carla Espinosa', title: 'Nurse' },
-    { name: 'Bob Kelso', title: 'Doctor of Medicine' },
-    { name: 'Janitor', title: 'Janitor' },
-    { name: 'Janitor', title: 'Janitor' },
-    { name: 'Janitor', title: 'Janitor' },
-    { name: 'Janitor', title: 'Janitor' },
-    { name: 'Janitor', title: 'Janitor' },
-  
+
+  items: NbMenuItem[] = [
+    // {
+    //   title: 'Profile',
+    //   icon: 'person-outline',
+     
+    // },
+    {
+      title: 'Event 1 ',
+    
+      children: [
+        {
+          title: 'STALL 1',
+         
+        },
+        {
+          title: 'Stall 5 ',   
+        },
+        {
+          title: 'Stall 7',
+        },
+      ],
+      
+    },
+    {
+      title: 'Event 8',
+    
+      children: [
+        {
+          title: 'Stall 2', 
+        
+        },
+      ],
+    },
+    {
+      title: 'Event 10',
+    
+      children: [
+        {
+          title: 'STALL 11',
+         
+        },
+        {
+          title: 'Stall 15 ',   
+        },
+        {
+          title: 'Stall 17',
+        },
+      ],
+      
+    },
   ];
 
 }
