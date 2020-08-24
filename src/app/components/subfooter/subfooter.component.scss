@@ -1,12 +1,3 @@
-:host {
-    display: flex;
-  }
-  
-  nb-card {
-    flex: 1 1 45%;
-    margin: 0 2.5%;
-  
-    &.own-scroll {
-      height: 30rem;
-    }
-  }
+@import '../../styles/themes';
+@import '~@nebular/theme/styles/global/breakpoints';
+@import '~bootstrap/scss/mixins/breakpoints';

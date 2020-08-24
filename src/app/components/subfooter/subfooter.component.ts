@@ -27,6 +27,10 @@ export class SubfooterComponent implements OnInit {
     { name: 'Carla Espinosa', title: 'Nurse' },
     { name: 'Bob Kelso', title: 'Doctor of Medicine' },
     { name: 'Janitor', title: 'Janitor' },
+    { name: 'Janitor', title: 'Janitor' },
+    { name: 'Janitor', title: 'Janitor' },
+    { name: 'Janitor', title: 'Janitor' },
+    { name: 'Janitor', title: 'Janitor' },
   
   ];
 
